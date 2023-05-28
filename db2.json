@@ -1,0 +1,87 @@
+{
+  "adherents": [],
+  "clubs": [],
+  "contrats": [
+    {
+      "montantContrat": "322",
+      "archive": "True",
+      "dateDebutContrat": "2022-12-07",
+      "dateFinContrat": "2022-12-23",
+      "specialite": "IA",
+      "id": 1
+    }
+  ],
+  "cours": [
+    {
+      "nom": "RESEAUX",
+      "description": "cours1",
+      "credits": 45,
+      "nbHeures": 45,
+      "annee": 2012,
+      "id": 1
+    }
+  ],
+  "departements": [
+    {
+      "nom": "test",
+      "universiteId": "2",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "nom": "aaa5",
+      "universiteId": "2"
+    }
+  ],
+  "detailEquipes": [],
+  "enseignants": [
+    {
+      "nom": "ens 1",
+      "prenom": "ens 1",
+      "dateNaissance": "2022-12-14",
+      "sexe": "Homme",
+      "dateEntree": "2022-12-17",
+      "salaire": "453",
+      "id": 1
+    },
+    {
+      "nom": "test",
+      "prenom": "aze",
+      "dateNaissance": "2022-12-22",
+      "sexe": "Homme",
+      "dateEntree": "2022-12-20",
+      "salaire": "1200",
+      "id": 2
+    }
+  ],
+  "equipes": [
+    {
+      "nom": "test",
+      "niveau": "3em",
+      "id": 1
+    }
+  ],
+  "etudiants": [
+    {
+      "nom": "etudiant 1 ",
+      "option": "GAMIX",
+      "departementId": "8",
+      "equipeId": "1",
+      "id": 1
+    }
+  ],
+  "paiements": [
+    {
+      "id": 8,
+      "montant": "78",
+      "etudiantId": "1",
+      "contratId": "1"
+    }
+  ],
+  "universites": [
+    {
+      "nom": "univ1",
+      "id": 2
+    }
+  ]
+}

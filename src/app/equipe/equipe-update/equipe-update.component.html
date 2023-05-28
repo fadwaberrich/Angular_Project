@@ -1,0 +1,73 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Ajout Equipe</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Equipe</a></li>
+        <li class="breadcrumb-item">Update</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Formulaire de modification d'une equipe</h5>
+
+            <!-- General Form Elements -->
+            <form #EquipeForm="ngForm" (ngSubmit)="edit(EquipeForm.value)">
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Nom de l'Equipe</label>
+                <div class="col-sm-10">
+                  <input type="text" #nom="ngModel" class="form-control" name="nom" required minlength="2" maxlength="8"
+                    [(ngModel)]="e.nom">
+
+                
+
+                  <div *ngIf="nom.errors?.['minlength']">
+                    nom a partir de 2 caracteres .
+                  </div>
+
+
+                  <div *ngIf="nom.invalid && (nom.touched || nom.dirty )" class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Ecrire Votre nom
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">niveau</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="niveau" [(ngModel)]="niveau">
+                </div>
+              </div>
+
+            
+
+
+              <div class="row mb-3">
+
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Okay</button>
+                </div>
+              </div>
+
+            </form><!-- End General Form Elements -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+</main><!-- End #main -->

@@ -1,0 +1,73 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>List Table</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item">Liste</li>
+        <li class="breadcrumb-item active">Table</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+     <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+  
+          <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Nos Enseignants </h5>
+                <h6>Recherche <input name="query" (input)="onSearchChange($any($event.target).value)"> </h6>
+                <button class="btn btn-light" [disabled]="page==1" (click)="decSearch()">
+                  <i class="bi bi-arrow-left"></i>
+                </button>
+                  {{page}}
+                <button class="btn btn-light" (click)="incSearch()">
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+                <!-- Active Table -->
+                <table class="table">
+                  <thead>
+                    <tr>
+
+                      <th scope="col">Nom et Prenom</th>
+                      <th scope="col">Date de Naissance</th>
+                      <th scope="col">Sexe</th>
+                      <th scope="col">Date début de Contrat</th>
+                      <th scope="col">Salaire</th>
+                      <th scope="col">Cours</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of mydata$ | async" [ngClass]="{'table-danger': ((item.id.length < 1))}">
+
+                      <td>{{item.nom +" "+ item.prenom}}</td>
+                      <td>{{item.dateNaissance}}</td>
+                      <td>{{item.sexe}}</td>
+                      <td>{{item.dateEntree}}</td>
+                      <td>{{item.salaire}}</td>
+                     
+                      <td>  <button type="button"  (click)="edit(item.id)" class="btn btn-dark active" style="margin-right: 10px;"><i class="bi bi-brush"></i></button>
+                        <app-enseignant-delete [id]=item.id  (confirmfunction)="confirmfunction($event)"></app-enseignant-delete>
+                         </td>
+                    </tr>
+               
+               
+                      
+                   
+                  </tbody>
+                </table>
+                <!-- End Active Table -->
+  
+              </div>
+            </div>
+  
+      </div>
+  
+  
+    </div>
+  </section>
+  
+  
+  </main><!-- End #main -->

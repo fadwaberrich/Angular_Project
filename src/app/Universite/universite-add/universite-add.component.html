@@ -1,0 +1,69 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Ajout Contrat</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Universite</a></li>
+        <li class="breadcrumb-item">Ajout Du Contrat</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+        
+        <div class="card"> 
+          <div class="card-body">
+            <h5 class="card-title">Formulaire d'Ajout d'un Universite</h5>
+
+            <!-- General Form Elements -->
+            <form #universiteForm="ngForm" (ngSubmit)="onProductCreate()">
+              <div class="col-sm-10">
+                <label for="inputText" class="col-sm-2 col-form-label">Nom Du L'Enseignant</label>
+
+                <input type="text"  #nom="ngModel" class="form-control" name="nom"  required minlength="2" maxlength="50" 
+                 [(ngModel)]="universite.nom">
+                 
+               
+
+                 <div *ngIf="nom.errors?.['minlength']" style="color:red">
+                  <i class="bi bi-exclamation-octagon me-1"></i> Minimum 2 caracteres  MAX 50.
+                </div>
+                 
+                
+                
+
+              </div>
+
+
+              
+
+             
+
+
+
+
+
+              <div class="row mb-3">
+
+                <div class="col-sm-12">
+                  <button type="submit" [disabled]="universiteForm.invalid" class="btn btn-primary d-flex"
+                    style=" margin-left:auto">Okay</button>
+                </div>
+              </div>
+
+            </form><!-- End General Form Elements -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+</main><!-- End #main -->

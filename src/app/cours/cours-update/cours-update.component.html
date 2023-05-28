@@ -1,0 +1,148 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Ajout Cours</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Cours</a></li>
+        <li class="breadcrumb-item">Update</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+  
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+  
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Formulaire de modification d'un cours</h5>
+  
+            <!-- General Form Elements -->
+            <form #CoursForm="ngForm" (ngSubmit)="oncoursupdate(CoursForm.value)">
+              <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Module</label>
+                <div class="col-sm-10">
+                  <select class="form-select" aria-label="Default select example" name="nom" [(ngModel)]="nom">
+                    <option selected>Choisir Le Cours</option>
+                    <option value="MB">MB</option>
+                    <option value="TE">TE</option>
+                    <option value="RESEAUX">RESEAUX</option>
+                    <option value="SPRING_BOOT">SPRING_BOOT</option>
+                    <option value="ANGULAR">ANGULAR</option>
+                    <option value="CCCF">CCCF</option>
+                    <option value="CCCA">CCCA</option>
+                    <option value="WEB">WEB</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-10">
+                <label for="inputText" class="col-sm-2 col-form-label">Description</label>
+
+                <input type="text"  #description="ngModel" class="form-control" name="description"  required minlength="3" maxlength="6" 
+                 [(ngModel)]="c.description">
+                 
+                 <div *ngIf="description.errors?.['required']">
+                  description est required.
+                </div>
+
+                 <div *ngIf="description.errors?.['minlength']">
+                  description a partir de 3 caracteres .
+                </div>
+                 
+                
+                 <div *ngIf="description.invalid && (description.touched || description.dirty )" class="alert alert-danger">
+                  <i class="bi bi-exclamation-octagon me-1"></i>Ecrire Une description
+                </div>
+
+              </div>
+
+
+              <div class="col-sm-10">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Credit</label>
+
+                <input type="number"  #credits="ngModel" class="form-control" name="credits"  required minlength="1" maxlength="2" 
+                 [(ngModel)]="c.credits">
+                 
+                 <div *ngIf="credits.errors?.['required']">
+                  description est required.
+                </div>
+
+                 <div *ngIf="credits.errors?.['minlength']">
+                  description a partir de 1 ou 2 nombres .
+                </div>
+                 
+                 <div *ngIf="credits.errors && (credits.dirty || credits.touched)" class="alert alert-danger"></div>
+                
+                 <div *ngIf="credits.invalid && (credits.touched || credits.dirty )" class="alert alert-danger">
+                  <i class="bi bi-exclamation-octagon me-1"></i>Taper le nombre de credit
+                </div>
+
+              </div>
+              
+
+            
+              <div class="col-sm-10">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Nombre Heure</label>
+
+                <input type="number"  #nbHeures="ngModel" class="form-control" name="nbHeures"  required minlength="1" maxlength="2" 
+                 [(ngModel)]="c.nbHeures">
+                 
+                 <div *ngIf="nbHeures.errors?.['required']">
+                  NombreHeure est required.
+                </div>
+
+                 <div *ngIf="nbHeures.errors?.['minlength']">
+                  Nombre Heure Doit Etre Inclus.
+                </div>
+                 
+                 <div *ngIf="nbHeures.errors && (nbHeures.dirty || nbHeures.touched)" class="alert alert-danger"></div>
+                
+                 <div *ngIf="nbHeures.invalid && (nbHeures.touched || nbHeures.dirty )" class="alert alert-danger">
+                  <i class="bi bi-exclamation-octagon me-1"></i>Taper le nombre des Heures
+                </div>
+
+              </div>
+              <div class="col-sm-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Annee</label>
+
+                <input type="number"  #annee="ngModel" class="form-control" name="annee"  required minlength="1" maxlength="4" 
+                 [(ngModel)]="c.annee">
+                 
+                 <div *ngIf="annee.errors?.['required']">
+                  Annee est required.
+                </div>
+
+                 <div *ngIf="annee.errors?.['minlength']">
+                  Annee Doit entre mentionee.
+                </div>
+                 
+                 <div *ngIf="annee.errors && (annee.dirty || annee.touched)" class="alert alert-danger"></div>
+                
+                 <div *ngIf="annee.invalid && (annee.touched || annee.dirty )" class="alert alert-danger">
+                  <i class="bi bi-exclamation-octagon me-1"></i>Taper l'annee
+                </div>
+
+              </div>
+
+              
+              <div class="row mb-3">
+              
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Okay</button>
+                </div>
+              </div>
+  
+            </form><!-- End General Form Elements -->
+  
+          </div>
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  </section>
+  
+  
+  </main><!-- End #main -->

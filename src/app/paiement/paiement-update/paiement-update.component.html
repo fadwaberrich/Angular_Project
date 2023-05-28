@@ -1,0 +1,83 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Maj Du  L'Etudiant</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Paiement</a></li>
+        <li class="breadcrumb-item">Maj</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+  
+    <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+          
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Formulaire d'ajout d'un Paiement</h5>
+          
+           
+            <!-- General Form Elements -->
+            <form #paiementForm="ngForm" (ngSubmit)="onpaiementupdate()">
+              <div class="row mb-3" >
+                <label for="inputText" class="col-sm-2 col-form-label">Montant Obligatoire</label>
+              
+                <div class="col-sm-10" >
+                  <input type="text" class="form-control" name="montant" [(ngModel)]="paiementVar.montant">
+                
+              </div>
+              
+            </div>
+            
+            <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Identifiant Du Contrat</label>
+            
+              <div class="col-sm-10">
+                <select  class="form-select" name="contrat" [(ngModel)]="paiementVar.contratId" >
+                  <option >Default</option>
+                  <option *ngFor="let item of mycontrat$ | async" value="{{item.id}}" >{{item.id}}</option>
+
+                </select>
+          
+                </div>
+              </div>         
+          
+              <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Identifiant Du L'Etudiant</label>
+            
+              <div class="col-sm-10">
+                <select  class="form-select" name="etudiantId" [(ngModel)]="paiementVar.etudiantId" >
+                  <option >Default</option>
+                  <option *ngFor="let item of myetudiant$ | async" value="{{item.id}}" >{{item.nom}}</option>
+
+                </select>
+          
+                </div>
+              </div>         
+          
+  
+             
+          
+              
+              <div class="row mb-3">
+              
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Okay</button>
+                </div>
+              </div>
+  
+            </form><!-- End General Form Elements -->
+  
+          </div>
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  </section>
+  
+  
+  </main><!-- End #main -->

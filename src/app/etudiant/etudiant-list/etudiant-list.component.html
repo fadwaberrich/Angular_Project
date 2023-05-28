@@ -1,0 +1,68 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>List Table</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item">Liste</li>
+        <li class="breadcrumb-item active">Table</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nos Etudiants</h5>
+
+            <!-- Active Table -->
+            <table class="table">
+              <thead>
+                <tr>
+
+                  <th scope="col">Nom Prenom</th>
+                  <th scope="col">option</th>
+                  <th scope="col">departement</th>
+                  <th scope="col">equipe</th>
+                  <th>Actions</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of mydata$ | async" [ngClass]="{'table-danger': ((item.id.length < 1 ) || ((item.nom.length < 1)) || ((item.option.length < 1)) ) }">
+
+                  <td>{{item.nom}}</td>
+                  <td>{{item.option}}</td>
+                
+                  <td >{{item.departementId}}</td>
+                  <td>{{item.equipeId}}</td>
+                  
+
+                  <td><button type="button" class="btn btn-dark active" (click)="edit(item.id)"
+                      style="margin-right: 10px;"><i class="bi bi-brush"></i></button>
+                    <button type="button" class="btn btn-danger active" (click)="delete(item.id)"><i
+                        class="bi bi-trash3"></i></button>
+                  </td>
+                </tr>
+
+
+
+
+              </tbody>
+            </table>
+            <!-- End Active Table -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+</main><!-- End #main -->

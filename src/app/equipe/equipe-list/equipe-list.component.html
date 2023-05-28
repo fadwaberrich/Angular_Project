@@ -1,0 +1,65 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>List Table</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Liste</li>
+          <li class="breadcrumb-item active">Table</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+ 
+       <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+    
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Nos Equipes</h5>
+                  <h6>Recherche <input name="query" (input)="onSearchChange($any($event.target).value)"> </h6>
+                  <button class="btn btn-light" [disabled]="page==1" (click)="decSearch()">
+                    <i class="bi bi-arrow-left"></i>
+                  </button>
+                    {{page}}
+                  <button class="btn btn-light" (click)="incSearch()">
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                  
+                  <!-- Active Table -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+
+                        <th scope="col">Nom</th>
+                        <th scope="col">niveau</th>
+                        <th></th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of mydata$ | async" [ngClass]="{'table-danger': ((item.id == null)||
+                      ((item.nom == null)) || ((item.niveau == null))||(item.detailEquipeId)) }">
+
+                        <td>{{item.nom}}</td>
+                        <td>{{item.niveau}}</td>
+                          <td><button type="button" (click)="edit(item.id)" class="btn btn-dark active" style="margin-right: 10px;"><i class="bi bi-brush"></i></button>
+                          <app-equipe-delete [id]=item.id  (confirmfunction)="confirmfunction($event)"></app-equipe-delete>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <!-- End Active Table -->
+    
+                </div>
+              </div>
+    
+        </div>
+    
+    
+      </div>
+    </section>
+    
+    
+    </main><!-- End #main -->

@@ -1,0 +1,128 @@
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Maj Enseignant</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Enseignant</a></li>
+          <li class="breadcrumb-item">Maj</li>
+  
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+    
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Formulaire d'ajout d'un étudiant</h5>
+    
+              <!-- General Form Elements -->
+              <form #EnseignantForm="ngForm" (ngSubmit)="onEnseignantupdate(EnseignantForm.value)">
+                <div class="col-sm-10">
+                  <label for="inputText" class="col-sm-2 col-form-label">Nom Du L'Enseignant</label>
+  
+                  <input type="text"  #nom="ngModel" class="form-control" name="nom"  required minlength="2" maxlength="8" 
+                   [(ngModel)]="ensVar.nom">
+                   
+                  
+  
+                   <div *ngIf="nom.errors?.['minlength']">
+                    nom a partir de 2 caracteres .
+                  </div>
+                   
+                  
+                   <div *ngIf="nom.invalid && (nom.touched || nom.dirty )" class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Ecrire Votre nom
+                  </div>
+                </div>
+
+                <div class="col-sm-10">
+                  <label for="inputText" class="col-sm-2 col-form-label">prenom </label>
+  
+                  <input type="text"  #prenom="ngModel" class="form-control" name="prenom"  required minlength="2" maxlength="8" 
+                   [(ngModel)]="ensVar.prenom">
+                 
+                   <div *ngIf="prenom.errors?.['minlength']">
+                    prenom a partir de 2 caracteres .
+                  </div>
+                   
+                  
+                   <div *ngIf="prenom.invalid && (prenom.touched || prenom.dirty )" class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Ecrire Votre prenom
+                  </div>
+                </div>
+  
+  
+                <div class="row mb-3">
+                 
+                  <div class="col-sm-10">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Date de Naissance</label>
+                    <input type="date" class="form-control" name="dateNaissance" [(ngModel)]="ensVar.dateNaissance">
+                  </div>
+                </div>
+  
+               <div class="row mb-3">
+                
+                  <div class="col-sm-10">
+                    <label class="col-sm-2 col-form-label">Sexe</label>
+                    <select class="form-select" aria-label="Default select example" name="sexe" [(ngModel)]="ensVar.sexe">
+                      <option selected>Choisir option</option>
+                      <option value="Homme">Homme</option>
+                      <option value="Femme">Femme</option>
+  
+                    </select>
+                  </div>
+                </div>
+             
+                <div class="row mb-3">
+                 
+                  <div class="col-sm-10">
+                    <label for="inputDate" class="col-sm-2 col-form-label">Date début de contart</label>
+                    <input type="date" class="form-control" name="dateEntree" [(ngModel)]="ensVar.dateEntree">
+                  </div>
+                </div>
+  
+                
+              <div class="col-sm-10">
+                <label for="inputText" class="col-sm-2 col-form-label">Salaire</label>
+
+                <input type="text"  #salaire="ngModel" class="form-control" name="salaire"  required minlength="3" maxlength="5" 
+                 [(ngModel)]="ensVar.salaire">
+                 
+                 <div *ngIf="salaire.errors?.['required']">
+                  salaire est required.
+                </div>
+
+                 <div *ngIf="salaire.errors?.['minlength']">
+                  Salaire a partir de 3 Chifree .
+                </div>
+                 
+                
+                 <div *ngIf="salaire.invalid && (salaire.touched || salaire.dirty )" class="alert alert-danger">
+                  <i class="bi bi-exclamation-octagon me-1"></i>Taper Le Salaire
+                </div>
+              </div>
+
+               
+                
+                <div class="row mb-3">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Okay</button>
+                  </div>
+                </div>
+    
+              </form><!-- End General Form Elements -->
+    
+            </div>
+          </div>
+    
+        </div>
+    
+    
+      </div>
+    </section>
+    
+    
+    </main><!-- End #main -->

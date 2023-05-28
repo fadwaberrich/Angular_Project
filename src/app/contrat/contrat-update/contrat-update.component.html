@@ -1,0 +1,121 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Maj Contrat</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Contrat</a></li>
+        <li class="breadcrumb-item">Update</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Maj d'un Contrat</h5>
+
+
+            <!-- General Form Elements -->
+            <form #ContratForm="ngForm" (ngSubmit)="oncontratupdate(ContratForm.value)">
+
+              <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label">Montant Obligatoire A Payer Pour Les
+                  Tranches</label>
+                <div class="col-sm-10">
+                  <input type="text" #montantContrat="ngModel" class="form-control" name="montantContrat" required minlength="3"
+                    maxlength="6" [(ngModel)]="c.montantContrat">
+                  <div *ngIf="montantContrat.errors?.['required']">
+                    montant is required.
+                  </div>
+
+
+                  <div *ngIf="montantContrat.invalid && (montantContrat.touched || montantContrat.dirty )" class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Montant invalide
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label">Archive</label>
+                <div class="col-sm-10">
+                  <input type="text" required minlength="1" #archive="ngModel" class="form-control" name="archive"
+                    required minlength="4" maxlength="5" [(ngModel)]="c.archive">
+                  <div *ngIf="archive.invalid && (archive.touched || archive.dirty )" class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Passer True Ou False
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Date Debut Du Contrat</label>
+
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" required minlength="1" #dateDebutContrat="ngModel"
+                    name="dateDebutContrat" [(ngModel)]="c.dateDebutContrat">
+                  <div *ngIf="dateDebutContrat.invalid && (dateDebutContrat.touched || dateDebutContrat.dirty )"
+                    class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Non ! Try Again
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Date Fin Du Contrat</label>
+
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" required minlength="1" #dateFinContrat="ngModel"
+                    name="dateFinContrat" [(ngModel)]="c.dateFinContrat">
+                  <div *ngIf="dateFinContrat.invalid && (dateFinContrat.touched || dateFinContrat.dirty )"
+                    class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Non ! Try Again
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Specialaité Du L'Etudiant</label>
+
+                <div class="col-sm-10">
+
+
+                  <input type="text" required minlength="2" #specialite="ngModel" class="form-control" name="specialite"
+                    [(ngModel)]="c.specialite">
+                  <div *ngIf="specialite.invalid && (specialite.touched || specialite.dirty )"
+                    class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>(IA,RESEAU,CLOUD,SECURITE)
+
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="row mb-3">
+
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Maj</button>
+                </div>
+              </div>
+
+            </form><!-- End General Form Elements -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+</main><!-- End #main -->

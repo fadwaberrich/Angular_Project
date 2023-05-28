@@ -1,0 +1,31 @@
+GET    /posts
+GET    /posts/id
+POST   /posts
+PUT    /posts/id
+DELETE /posts/id
+
+localhost:3000/adherents
+localhost:3000/clubs
+localhost:3000/contrats
+localhost:3000/cours
+localhost:3000/departements
+localhost:3000/detailEquipes
+localhost:3000/enseignants
+localhost:3000/equipes
+localhost:3000/etudiants
+localhost:3000/paiements
+localhost:3000/universites
+
+get b GET  : http://localhost:3000/paiements
+get one b GET + id : http://localhost:3000/paiements/1
+ajout b post : http://localhost:3000/paiements
+update b put w tab3eth el objet kemel : http://localhost:3000/paiements/1
+el patch ki tbaddel juste champ barka ( meghir ma testa3mlouha)
+delete juste el id : http://localhost:3000/paiements/1
+
+paiement 3andha contratId
+ken t7eb twarri les Etudiants tab3eth get b ?_expand=contrat ( meghir s )  : http://localhost:3000/paiements?_expand=contrat
+el 3aks
+etudiant ma3andouch champ paiement id , howa normalement 3andou paiementSet
+ta3mel get b ?_embed=paiements ( marra hedhi b S) : http://localhost:3000/etudiants?_embed=paiements
+tnajem ta3mel plusieurs embeds a la fois genre : http://localhost:3000/etudiants?_embed=paiements&_embed=contrats

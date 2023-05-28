@@ -1,0 +1,241 @@
+{
+  "adherents": [
+    {
+      "id": "1",
+      "etudiantId": "1",
+      "clubId": "1"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "1",
+      "dateCreation": "2022-12-14",
+      "description": "Sad",
+      "nom": "les Snakes 2"
+    },
+    {
+      "id": "77",
+      "dateCreation": "2022-12-11",
+      "description": "BBBB",
+      "nom": "BB"
+    }
+  ],
+  "contrats": [
+    {
+      "id": "1",
+      "titre": "lorem",
+      "archive": "1",
+      "dateDebut": "2022-12-01",
+      "dateFin": "2024-06-25",
+      "montant": "2500",
+      "specialite": "0",
+      "etudiantId": "1",
+      "universiteId": "0",
+      "paiementId": "0"
+    },
+    {
+      "id": "2",
+      "archive": "0",
+      "titre": "lorem2",
+      "dateDebut": "2022-12-31",
+      "dateFin": "2022-12-01",
+      "montant": "7000",
+      "specialite": "1",
+      "etudiantId": "1",
+      "universiteId": "0",
+      "paiementId": "0"
+    }
+  ],
+  "cours": [
+    {
+      "id": "20",
+      "nom": "azeaze",
+      "annee": "20",
+      "credit": "7",
+      "description": "Cours",
+      "nbHeures": "10"
+    },
+    {
+      "id": "22",
+      "nom": "azeaze",
+      "annee": "20",
+      "credit": "7",
+      "description": "Cours",
+      "nbHeures": "10"
+    },
+    {
+      "id": "61",
+      "nom": "TE",
+      "annee": "11",
+      "credit": "11",
+      "description": "aaa",
+      "nbHeures": "11"
+    },
+    {
+      "id": "62",
+      "nom": "RESEAUX",
+      "annee": "22",
+      "credit": "22",
+      "description": "XX",
+      "nbHeures": "22"
+    }
+  ],
+  "departements": [
+    {
+      "id": "6",
+      "nom": "Reseau",
+      "universiteId": "1"
+    },
+    {
+      "id": "8",
+      "nom": "Spring",
+      "universiteId": "1"
+    },
+    {
+      "id": "17",
+      "nom": "C++",
+      "universiteId": "1"
+    },
+    {
+      "id": "16",
+      "nom": "Java",
+      "universiteId": "1"
+    }
+  ],
+  "detailEquipes": [
+    {
+      "id": "31",
+      "thematique": "test",
+      "equipeId": "0",
+      "salle": ""
+    },
+    {
+      "id": "32",
+      "thematique": "test",
+      "equipeId": "0",
+      "salle": ""
+    },
+    {
+      "id": "33",
+      "thematique": "test",
+      "equipeId": "0",
+      "salle": ""
+    },
+    {
+      "id": "34",
+      "thematique": "test",
+      "equipeId": "0",
+      "salle": ""
+    }
+  ],
+  "enseignants": [
+    {
+      "id": "1",
+      "dateNaissance": "2022-12-06",
+      "dateEntree": "2022-12-07",
+      "nom": "1",
+      "prenom": "1",
+      "salaire": "1",
+      "sexe": "1"
+    },
+    {
+      "id": "55",
+      "dateNaissance": "2022-12-06",
+      "dateEntree": "0021-11-10",
+      "nom": "1",
+      "prenom": "1",
+      "salaire": "11",
+      "sexe": "0"
+    }
+  ],
+  "equipes": [
+    {
+      "id": "1",
+      "niveau": "1",
+      "nom": "GOW",
+      "detailEquipeId": null
+    },
+    {
+      "id": "30",
+      "niveau": "2",
+      "nom": "test",
+      "detailEquipeId": null
+    }
+  ],
+  "etudiants": [
+    {
+      "id": "4",
+      "nom": "Mahmoud",
+      "option": "1",
+      "prenom": "Cheikh",
+      "departementId": "8",
+      "equipeId": "1"
+    },
+    {
+      "id": "1",
+      "nom": "x",
+      "option": "0",
+      "prenom": "X",
+      "departementId": "6",
+      "equipeId": "1"
+    },
+    {
+      "id": "2",
+      "nom": "x",
+      "option": "0",
+      "prenom": "x",
+      "departementId": "8",
+      "equipeId": "30"
+    },
+    {
+      "id": "3",
+      "nom": "x",
+      "option": "0",
+      "prenom": "c",
+      "departementId": "8",
+      "equipeId": "30"
+    },
+    {
+      "id": "5",
+      "nom": "Mahmoud",
+      "option": "1",
+      "prenom": "Cheikh",
+      "departementId": "8",
+      "equipeId": "1"
+    }
+  ],
+  "paiements": [
+    {
+      "id": "38",
+      "montant": "3",
+      "contratId": "1",
+      "etudiantId": "1"
+    },
+    {
+      "id": "39",
+      "montant": "123",
+      "contratId": "1",
+      "etudiantId": "1"
+    },
+    {
+      "id": "42",
+      "montant": "1",
+      "contratId": "1",
+      "etudiantId": "1"
+    }
+  ],
+  "universites": [
+    {
+      "id": "1",
+      "nom": "Esprit"
+    },
+    {
+      "id": "35",
+      "nom": "ISETCOM"
+    },
+    {
+      "id": "37",
+      "nom": "37"
+    }
+  ]
+}

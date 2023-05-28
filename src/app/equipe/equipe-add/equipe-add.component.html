@@ -1,0 +1,79 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Ajout Equipe</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Equipe</a></li>
+        <li class="breadcrumb-item">Ajout</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+  
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+  
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Formulaire d'ajout d'une Equipe</h5>
+  
+            <!-- General Form Elements -->
+            <form #CoursForm="ngForm" (ngSubmit)="add(CoursForm.value)">
+              
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Nom de l'Equipe</label>
+                <div class="col-sm-10">
+
+                <input type="text"  #nom="ngModel" class="form-control" name="nom"  required minlength="2" maxlength="16" 
+                 [(ngModel)]="equipe.nom">
+                 
+                 <div *ngIf="nom.errors?.['minlength']" style="color:red">
+                  <i class="bi bi-exclamation-octagon me-1"></i> Nom Minimum 2 caracteres Max 16.
+                </div>
+                 
+               
+</div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="inputNumber" class="col-sm-2 col-form-label">Niveau</label>
+                <div class="col-sm-10">
+
+                <input type="text"  #niveau="ngModel" class="form-control" name="niveau"  required minlength="1" maxlength="16" 
+                 [(ngModel)]="equipe.niveau">
+                 
+               
+
+                 <div *ngIf="niveau.errors?.['minlength']" style="color:red">
+                  <i class="bi bi-exclamation-octagon me-1"></i> Niveau Minimum 1 caracteres Max 16.
+                </div>
+                 
+                
+              
+              </div>
+          </div>
+
+           
+              
+              <div class="row mb-3">
+              
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Okay</button>
+                </div>
+              </div>
+  
+            </form><!-- End General Form Elements -->
+  
+          </div>
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  </section>
+  
+  
+  </main><!-- End #main -->

@@ -1,0 +1,162 @@
+{
+  "adherent": [
+    {
+      "clubId": 1,
+      "etudiantId": 1,
+      "id": 1
+    },
+    {
+      "clubId": 2,
+      "etudiantId": 1,
+      "id": 2
+    },
+    {
+      "clubId": 2,
+      "etudiantId": 2,
+      "id": 3
+    },
+    {
+      "clubId": 1,
+      "etudiantId": 3,
+      "id": 4
+    }
+  ],
+  "clubs": [
+    {
+      "dateCreation": "2020",
+      "description": "test",
+      "id": 1,
+      "nom": "test"
+    },
+    {
+      "dateCreation": "2020",
+      "description": "test",
+      "id": 2,
+      "nom": "test"
+    }
+  ],
+  "contrats": [
+    {
+      "archive": true,
+      "dateDebutContrat": "2022-12-01",
+      "dateFinContrat": "2024-06-25",
+      "etudiantId": 1,
+      "id": 1,
+      "montantContrat": 2500,
+      "specialite": "IA"
+    },
+    {
+      "archive": true,
+      "dateDebutContrat": "2022-12-01",
+      "dateFinContrat": "2024-06-25",
+      "etudiantId": 1,
+      "id": 2,
+      "montantContrat": 2500,
+      "specialite": "RESEAU"
+    }
+  ],
+  "cours": [
+    {
+      "annee": 2000,
+      "credits": 1,
+      "description": "test",
+      "id": 1,
+      "nom": "math",
+      "nombreHeures": 2
+    }
+  ],
+  "departements": [
+    {
+      "id": 1,
+      "nom": "info",
+      "universiteId": 1
+    }
+  ],
+  "detailEquipes": [
+    {
+      "equipeId": 1,
+      "id": 1,
+      "salle": 3,
+      "thematique": "test"
+    }
+  ],
+  "enseignant": [
+    {
+      "dateContrat": "2020",
+      "dateNaissance": "1990",
+      "id": 1,
+      "nom": "test",
+      "prenom": "test",
+      "salaire": 2000,
+      "sexe": "homme"
+    }
+  ],
+  "equipes": [
+    {
+      "id": 1,
+      "niveau": "EXPERT",
+      "nomEquipe": "test"
+    },
+    {
+      "id": 2,
+      "niveau": "JUNIOR",
+      "nomEquipe": "test"
+    }
+  ],
+  "etudiants": [
+    {
+      "equipeId": 1,
+      "id": 1,
+      "nomE": "Mahmoud",
+      "option": "SE",
+      "prenomE": "Cheikh"
+    },
+    {
+      "departementId": 1,
+      "id": 2,
+      "nomE": "Mahmoud",
+      "option": "SE",
+      "prenomE": "Cheikh"
+    },
+    {
+      "equipeId": 1,
+      "id": 3,
+      "nomE": "Mahmoud",
+      "option": "SE",
+      "prenomE": "Cheikh"
+    },
+    {
+      "departementId": 2,
+      "equipeId": 1,
+      "id": 4,
+      "nomE": "Mahmoud",
+      "option": "SAE",
+      "prenomE": "Cheikh"
+    }
+  ],
+  "paiement": [
+    {
+      "contratId": 1,
+      "id": 1,
+      "montant": 3000
+    }
+  ],
+  "universites": [
+    {
+      "id": 1,
+      "nomUniv": "Esprit"
+    },
+    {
+      "id": 2,
+      "nomUniv": "ISETCOM"
+    },
+    {
+      "id": 3,
+      "nomUniv": "INSAT"
+    },
+    {
+      "nom": "test47",
+      "id": 4
+    }
+  ]
+}

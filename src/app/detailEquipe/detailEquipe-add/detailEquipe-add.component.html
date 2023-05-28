@@ -1,0 +1,112 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Club</a></li>
+        <li class="breadcrumb-item">Ajout</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Ajout Detail Equipe</h5>
+
+            <!-- General Form Elements -->
+            <form #DetailEquipeForm="ngForm" (ngSubmit)="ondeDetailEquipeCreate(DetailEquipeForm.value)">
+
+              <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label">Nombre De Salle </label>
+                <div class="col-sm-10">
+
+
+                  <input type="text" #salle="ngModel" class="form-control" name="salle" required minlength="2"
+                    maxlength="3" [(ngModel)]="detailEquipe.salle">
+
+                  <div *ngIf="salle.errors?.['required']">
+                    Nombre du salle est required.
+                  </div>
+
+                  <div *ngIf="salle.errors?.['minlength']">
+                    Nombre du salle est de type integer .
+                  </div>
+
+
+                  <div *ngIf="salle.invalid && (salle.touched || salle.dirty )" class="alert alert-danger">
+                    <i class="bi bi-exclamation-octagon me-1"></i>Taper Nombre du salle
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label">Thematique</label>
+                <div class="col-sm-10">
+                    <input type="text" #thematique="ngModel" class="form-control" name="thematique" required
+                      minlength="2" maxlength="8" [(ngModel)]="detailEquipe.thematique">
+
+                    <div *ngIf="thematique.errors?.['required']">
+                      Thematique est required.
+                    </div>
+
+                    <div *ngIf="thematique.errors?.['minlength']">
+                      Thematique a partir de 2 caracteres .
+                    </div>
+
+
+                    <div *ngIf="salle.invalid && (thematique.touched || thematique.dirty )" class="alert alert-danger">
+                      <i class="bi bi-exclamation-octagon me-1"></i>Taper La Thematique
+                    </div>
+                  </div>
+                </div>
+
+              <div class="row mb-3">
+                <label for="inputText" class="col-sm-2 col-form-label">Equipe Id</label>
+                <div class="col-sm-10">
+                  <div class="col-sm-10">
+
+                    <input type="text" #equipeId="ngModel" class="form-control" name="equipeId" required minlength="1"
+                      maxlength="3" [(ngModel)]="detailEquipe.equipeId">
+
+                    <div *ngIf="equipeId.errors?.['required']">
+                      equipeId est required.
+                    </div>
+
+                    <div *ngIf="equipeId.errors?.['minlength']">
+                      Id Equipe de type integer.
+                    </div>
+
+
+                    <div *ngIf="equipeId.invalid && (equipeId.touched || equipeId.dirty )" class="alert alert-danger">
+                      <i class="bi bi-exclamation-octagon me-1"></i>Taper L'id D'equpe
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">submit</button>
+                </div>
+              </div>
+
+            </form><!-- End General Form Elements -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+</main><!-- End #main -->

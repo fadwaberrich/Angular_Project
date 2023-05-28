@@ -1,0 +1,63 @@
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Ajout Cours</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Cours</a></li>
+        <li class="breadcrumb-item">Ajout</li>
+
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Formulaire d'ajout d'un étudiant</h5>
+
+            <!-- General Form Elements -->
+            <form #adherentForm="ngForm" (ngSubmit)="add(adherentForm.value)">
+
+              <div class="row mb-3">
+                <label for="etudaintId" class="col-sm-2 col-form-label">Club</label>
+                <div class="col-sm-10">
+
+                  <select name="clubId" id="clubId" class="form-select" ngModel>
+                    <option *ngFor="let item of dataClub$ | async" name="clubId" value="{{item.id}}">{{item.nom}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+
+                <label for="inputNumber" class="col-sm-2 col-form-label">etudiant</label>
+                <div class="col-sm-10">
+                  <select name="etudiantId" id="etudiantId" class="form-select" ngModel>
+                    <option *ngFor="let item of dataEtudiant$ | async" name="etudiantId" value="{{item.id}}">
+                      {{item.nom}} {{item.prenom}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3">
+
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-primary d-flex" style=" margin-left:auto">Okay</button>
+                </div>
+              </div>
+
+            </form><!-- End General Form Elements -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+</main><!-- End #main -->
